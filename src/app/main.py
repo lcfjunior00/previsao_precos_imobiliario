@@ -1,16 +1,13 @@
-from dash import Dash, html, dcc # type: ignore
-import dash_bootstrap_components as dbc # type: ignore
-from dash.dependencies import Input, Output # type: ignore
+from dash import Dash, html, dcc
+import dash_bootstrap_components as dbc
+from dash.dependencies import Input, Output
 from app import app
 from paginas import home, dados
 import pandas as pd
 
-from src import models
-
 navegacao = dbc.NavbarSimple(
     children=[
         dbc.NavItem(dbc.NavLink('Dados', href='/dados')),
-        dbc.NavItem(dbc.NavLink('Modelos', href='/modelos'))
     ],
     brand="Previsão de preços imobiliários",
     brand_href="/home",
@@ -32,8 +29,6 @@ app.layout = html.Div([
 def mostrar_pagina(pathname):
     if pathname == '/dados':
         return dados.layout
-    elif pathname == '/modelos':
-        return models.layout
     else:
         return home.layout
 

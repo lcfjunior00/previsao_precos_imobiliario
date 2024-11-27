@@ -57,9 +57,8 @@ def prever_preco(n_clicks, lotarea, totalbsmtSF, oneflrsf, twoflrsf, grlivarea, 
     Essa função irá receber todos os estados colhidos nos inputs, criar um dataframe e 
     fazer a predição do valor do imóvel.
     '''
-    #Carrega modelo:
-    modelo = joblib.load(r'C:/Users/luizc/OneDrive/Documentos/Junior/Profissional/CV/Portifólio Ciência de Dados/Projetos/Previsão_de_precos_imobiliarios_deploy/previsao_precos_imobiliario/models/cat_best_model.pkl')
-
+    
+    modelo = joblib.load('models/cat_best_model.pkl')
 
     #Esse if impede que a página tente prever um valor mesmo sem ter um click no botão.
     if n_clicks == 0 or n_clicks is None:

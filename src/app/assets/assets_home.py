@@ -1,5 +1,5 @@
-import dash_bootstrap_components as dbc # type: ignore
-from dash import html # type: ignore
+import dash_bootstrap_components as dbc
+from dash import html
 
 #Formulário de preenchimento das varíaveis:
 formulario = dbc.Container([
