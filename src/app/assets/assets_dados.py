@@ -1,7 +1,7 @@
 from dash import html
 import dash_bootstrap_components as dbc
-from assets.imagens import logo_kaggle, imagem_competicao_houseprices, imagem_mapa_iowa
-from assets.urls import url_houseprices
+from src.app.assets.imagens import logo_kaggle, imagem_competicao_houseprices, imagem_mapa_iowa
+from src.app.assets.urls import url_houseprices
 
 home_left_1 = [
     dbc.CardHeader("Origem:"),

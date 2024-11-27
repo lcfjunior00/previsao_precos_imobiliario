@@ -4,9 +4,9 @@ import dash_bootstrap_components as dbc
 import joblib
 import pandas as pd
 import numpy as np
-from app import app
+from src.app.dash_app import app
 import catboost
-from assets.assets_home import formulario
+from src.app.assets.assets_home import formulario
 
 layout = html.Div([
     formulario,

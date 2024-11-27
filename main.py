@@ -33,4 +33,5 @@ def mostrar_pagina(pathname):
     else:
         return home.layout
 
-app.run(debug=False, host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(debug=False, host='0.0.0.0')

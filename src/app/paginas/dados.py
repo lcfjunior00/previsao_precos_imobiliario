@@ -1,6 +1,6 @@
 from dash import Dash, html, dcc
 import dash_bootstrap_components as dbc
-from assets.assets_dados import home_left_1, home_left_2, home_right
+from src.app.assets.assets_dados import home_left_1, home_left_2, home_right
 
 layout = html.Div([
     dbc.Container([
