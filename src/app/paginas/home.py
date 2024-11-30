@@ -58,7 +58,7 @@ def prever_preco(n_clicks, lotarea, totalbsmtSF, oneflrsf, twoflrsf, grlivarea, 
     fazer a predição do valor do imóvel.
     '''
     
-    modelo = joblib.load('models/cat_best_model.pkl')
+    modelo = joblib.load(open('models/cat_best_model.pkl'))
 
     #Esse if impede que a página tente prever um valor mesmo sem ter um click no botão.
     if n_clicks == 0 or n_clicks is None:
