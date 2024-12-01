@@ -33,4 +33,4 @@ def mostrar_pagina(pathname):
     else:
         return home.layout
 
-app.run(debug=False, host='0.0.0.0')
+app.run(debug=False, port=8050, host='0.0.0.0')
