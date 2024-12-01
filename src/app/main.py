@@ -5,10 +5,6 @@ from src.app.dash_app import app, server
 from src.app.paginas import home, dados
 import pandas as pd
 
-#app = Dash(__name__, external_stylesheets=[dbc.themes.FLATLY, 'https://codepen.io/chriddyp/pen/bWLwgP.css'], suppress_callback_exceptions=True)
-
-#server = app.server
-
 navegacao = dbc.NavbarSimple(
     children=[
         dbc.NavItem(dbc.NavLink('Dados', href='/dados')),
