@@ -1,5 +1,6 @@
-#from dash import Dash
-#import dash_bootstrap_components as dbc
+from dash import Dash
+import dash_bootstrap_components as dbc
 
-#app = Dash(__name__, external_stylesheets=[dbc.themes.FLATLY, 'https://codepen.io/chriddyp/pen/bWLwgP.css'], suppress_callback_exceptions=True)
+app = Dash(__name__, external_stylesheets=[dbc.themes.FLATLY, 'https://codepen.io/chriddyp/pen/bWLwgP.css'], suppress_callback_exceptions=True)
 
+server = app.server
