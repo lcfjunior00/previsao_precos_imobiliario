@@ -4,9 +4,10 @@ import dash_bootstrap_components as dbc
 import joblib
 import pandas as pd
 import numpy as np
-from src.app.dash_app import app
+from src.app.app import app
 import catboost
 from src.app.assets.assets_home import formulario
+import os
 
 layout = html.Div([
     formulario,
@@ -57,8 +58,9 @@ def prever_preco(n_clicks, lotarea, totalbsmtSF, oneflrsf, twoflrsf, grlivarea, 
     Essa função irá receber todos os estados colhidos nos inputs, criar um dataframe e 
     fazer a predição do valor do imóvel.
     '''
-    
-    modelo = joblib.load(open('models/cat_best_model.pkl'))
+
+
+    modelo = joblib.load(open('models/cat_best_model.pkl', "rb"))
 
     #Esse if impede que a página tente prever um valor mesmo sem ter um click no botão.
     if n_clicks == 0 or n_clicks is None:

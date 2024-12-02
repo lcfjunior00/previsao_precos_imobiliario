@@ -1,9 +1,15 @@
 from dash import Dash, html, dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
-from src.app.dash_app import app
-from src.app.paginas import home, dados
 import pandas as pd
+
+
+#dbc.themes.FLATLY
+
+app = Dash(__name__, external_stylesheets=[dbc.themes.FLATLY, 'https://codepen.io/chriddyp/pen/bWLwgP.css'], suppress_callback_exceptions=True)
+server = app.server
+
+from src.app.paginas import home, dados
 
 navegacao = dbc.NavbarSimple(
     children=[
@@ -32,6 +38,5 @@ def mostrar_pagina(pathname):
         return dados.layout
     else:
         return home.layout
-
-if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+if __name__ == '__app__':
+    app.run(debug=False, port=8050, host='0.0.0.0')

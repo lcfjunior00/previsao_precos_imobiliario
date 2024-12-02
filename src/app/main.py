@@ -1,7 +1,7 @@
 from dash import Dash, html, dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
-from src.app.dash_app import app, server
+from src.app.app import app, server
 from src.app.paginas import home, dados
 import pandas as pd
 
