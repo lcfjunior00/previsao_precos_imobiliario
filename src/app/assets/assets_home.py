@@ -3,6 +3,7 @@ from dash import html
 
 #Formulário de preenchimento das varíaveis:
 formulario = dbc.Container([
+    html.P("Explicação de cada variável está presente na página Dados", className="text-center mb-3 mt-3"),
     html.P("Preencha as informações abaixo e clique em prever para rodar o modelo", className="text-center mb-5"),
     dbc.Row([
         dbc.Col([
